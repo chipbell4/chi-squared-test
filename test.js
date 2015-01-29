@@ -11,10 +11,14 @@ var testOne = function(observations, expectations, degreesOfFreedomReduction, is
     else {
         assert(p > 0.05, 'Expected ' + p + ' to be not significant');
     }
+
+    console.log(p + ' is good');
 };
 
 var testCases = [
-    [ [1, 1], [1, 1], 0, false ],
+    [ [1, 1], [1, 1], 1, false ],
+    [ [6, 3, 3, 0, 0, 0], [2, 2, 2, 2, 2, 2], 1, true ],
+    [ [2, 2, 4, 4, 2, 2], [2, 2, 2, 2, 2, 2], 1, false],
 ];
 
 
