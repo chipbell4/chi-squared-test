@@ -20,7 +20,7 @@ var probability = chiSquaredTest(observed, expected, reduction);
 // Gives 0.010362, which indicates that it's unlikely the die is fair 
 
 // However, something a little more likely
-observed = [2, 2, 4, 4, 2, 2];
+observed = [1, 2, 4, 4, 2, 1];
 probability = chiSquaredTest(observed, expected, reduction);
-// Gives back 0.549416, which is indicates that they did come from the same distribution (by most statistical standards)
+// Gives back 0.415881, which is indicates that they did come from the same distribution (by most statistical standards)
 ```
