@@ -1,0 +1,21 @@
+{
+  "name": "chi-squared-test",
+  "version": "1.0.0",
+  "description": "A simple function for calculating the chi-squared probability for a given observation set and expected set\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chi-squared",
+    "probability",
+    "chi",
+    "mathematics",
+    "inference"
+  ],
+  "author": "Chip Bell",
+  "license": "MIT",
+  "dependencies": {
+    "chi-squared": "^1.1.0"
+  }
+}
