@@ -2,7 +2,8 @@ var assert = require('assert');
 var chiSquaredTest = require('./index.js');
 
 var testOne = function(observations, expectations, degreesOfFreedomReduction, isSignificant) {
-    var p = chiSquaredTest(observations, expectations, degreesOfFreedomReduction);
+    var resultSet = chiSquaredTest(observations, expectations, degreesOfFreedomReduction);
+    var p = resultSet.probability;
 
     if(isSignificant) {
         assert(p <= 0.05, 'Expected ' + p + ' to be significant');

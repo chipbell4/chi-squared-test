@@ -17,13 +17,18 @@ var calculateSingleChiSquaredTerm = function(observed, expected) {
  * @param expectations The list of expectations
  */
 var calculateChiSquaredStatistic = function(observations, expectations) {
-    var total = 0;
+    var resultSet = {
+        chiSquared: 0,
+        terms: []
+    };
     var N = observations.length;
     for(var i = 0; i < N; i++) {
-        total += calculateSingleChiSquaredTerm(observations[i], expectations[i]);
+        var singleTerm = calculateSingleChiSquaredTerm(observations[i], expectations[i]);
+        resultSet.terms.push(singleTerm);
+        resultSet.chiSquared += singleTerm;
     }
 
-    return total;
+    return resultSet;
 };
 
 /**
@@ -37,6 +42,7 @@ var calculateChiSquaredStatistic = function(observations, expectations) {
 module.exports = function(observations, expectations, degreesOfFreedomReduction) {
     var degreesOfFreedom = observations.length - degreesOfFreedomReduction;
 
-    var chiSquared = calculateChiSquaredStatistic(observations, expectations);
-    return 1 - chi.cdf(chiSquared, degreesOfFreedom);
+    var resultSet = calculateChiSquaredStatistic(observations, expectations);
+    resultSet.probability = 1 - chi.cdf(resultSet.chiSquared, degreesOfFreedom);
+    return resultSet;
 }
