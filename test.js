@@ -12,7 +12,7 @@ var testOne = function(observations, expectations, degreesOfFreedomReduction, is
         assert(p > 0.05, 'Expected ' + p + ' to be not significant');
     }
 
-    console.log(p + ' is good');
+    console.log('Passed:' + JSON.stringify(resultSet));
 };
 
 var testCases = [
