@@ -1,6 +1,6 @@
 {
   "name": "chi-squared-test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple function for calculating the chi-squared probability for a given observation set and expected set\"",
   "main": "index.js",
   "scripts": {
