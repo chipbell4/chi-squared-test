@@ -5,7 +5,7 @@ in the measurement, calculates the probability that the observations came from t
 
 For example, let's check a die for fairness:
 ```
-var chiSquaredTest = require('chai-squared-test');
+var chiSquaredTest = require('chi-squared-test');
 
 // We expect a fair die
 var expected = [2, 2, 2, 2, 2, 2];
