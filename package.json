@@ -6,6 +6,10 @@
   "scripts": {
     "test": "node test.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chipbell4/chi-squared-test.git"
+  },
   "keywords": [
     "chi-squared",
     "probability",
