@@ -16,11 +16,11 @@ var observed = [6, 3, 3, 0, 0, 0];
 // Reduction in degrees of freedom is 1, since knowing 5 categories determines the 6th
 var reduction = 1;
 
-var probability = chiSquaredTest(observed, expected, reduction);
+var probability = chiSquaredTest(observed, expected, reduction).probability;
 // Gives 0.010362, which indicates that it's unlikely the die is fair 
 
 // However, something a little more likely
 observed = [1, 2, 4, 4, 2, 1];
-probability = chiSquaredTest(observed, expected, reduction);
+probability = chiSquaredTest(observed, expected, reduction).probability;
 // Gives back 0.415881, which is indicates that they did come from the same distribution (by most statistical standards)
 ```
